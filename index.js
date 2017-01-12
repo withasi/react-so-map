@@ -1,8 +1,6 @@
 /**
  * Created by siwangli on 2016/12/11.
  */
-console.log(123)
-
 
 import React from "react";
 import ReactDOM from "react-dom";
