@@ -18,4 +18,4 @@ SoMap is 360 map javascript API
 
 #效果如下：
 
-![searchBox](http://p9.qhimg.com/t01d27984f26289f7e8.gif)
+![searchBox](http://p2.qhimg.com/t013516837b6f0ce14c.gif)
