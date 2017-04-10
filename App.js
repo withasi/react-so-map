@@ -37,10 +37,10 @@ export default class App extends React.Component {
                            console.log(this.map.getZoom())
                        },
                        'ready': function () {
-                           _Markers.forEach((options, index) => {
+                          /* _Markers.forEach((options, index) => {
                                options.map = this.map;
                                new Marker(options)
-                           })
+                           })*/
                        }
 
                    }}
