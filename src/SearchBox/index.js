@@ -168,6 +168,8 @@ export default class SearchBox extends React.Component {
             this.setState({
                 poiList: dt,
                 currentCard: "content"
+            }, ()=>{
+                MapUI.fitBoundsBesideLeftCard(this.map, dt.poi||[], true);
             });
         })
     }
