@@ -1,0 +1,50 @@
+@borderColor: #ededed;
+.home{
+  cursor: pointer;
+  line-height:38px;
+  border-bottom: 1px solid @borderColor;
+  &:before{
+    content:url(../../../../img/my_home.png);
+    width:16px;
+    height:16px;
+    float:left;
+    margin:3px 22px 0 0;
+  }
+}
+.company{
+  cursor: pointer;
+  line-height:38px;
+  border-bottom: 1px solid @borderColor;
+  &:before{
+    content:url(../../../../img/my_company.png);
+    width:16px;
+    height:16px;
+    float:left;
+    margin:3px 22px 0 0;
+  }
+}
+
+.title{
+  font-weight: bold;
+}
+
+.opercont{
+  float:right;
+  margin-right: 10px;
+
+  .btn{
+    float:right;
+    margin-right:8px;
+    &:hover{
+      color:#57c5f7;
+    }
+  }
+
+  .name{
+    margin-right: 85px;
+    width:120px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

@@ -10,7 +10,16 @@
 </head>
 <body>
 <script src="{%= o.htmlWebpackPlugin.options.mapapi %}"></script>
+<script src="//s5.ssl.qhres.com/static/d62b2fc7641df02d.js"></script>
+<script>
 
+    /***** 兼容性全局变量 start ******/
+    window.So = window.So || {};
+    window.So.Map = window.So.Map || {};
+    window.So.Map.backData = [];
+    window.So.serviceUrl = window.So.serviceUrl || {};
+    /***** 兼容性全局变量 end ******/
+</script>
 <div id="container" style="width:700px;height:500px;border:1px solid;">
     <!-- This element's contents will be replaced with your component. -->
 </div>

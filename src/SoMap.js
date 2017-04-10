@@ -3,11 +3,19 @@
  */
 'use strict';
 import React from 'react';
-
+import SearchBox from './SearchBox/index';
+import DirectionBox from './DirectionBox/index';
+import './css/main';
+/***** 兼容性全局变量 end ******/
 export default class SoMap extends React.Component {
     constructor(param) {
         super(param);
+
+        this.state={
+            ready:false
+        }
     }
+
 
     getMapOptions(opts) {
         opts = opts||{};
@@ -32,6 +40,25 @@ export default class SoMap extends React.Component {
         this.map = new so.maps.Map(this.refs.mapContainer, mapOptions);
         this.bindMapEvent(this.map, eventHanders);
 
+        this.map.on('ready', () => {
+            this.setState({
+                ready:true
+            })
+        });
+
+    }
+
+    renderComponents(cs){
+        if(this.state.ready){
+            return cs.map((item, i)=>{
+                switch(item){
+                    case "searchBox":
+                        return <SearchBox key={i} map={this.map}/>
+                    case "directionBox":
+                        return <DirectionBox key={i} map={this.map}/>
+                }
+            })
+        }
     }
 
     componentDidMount() {
@@ -50,7 +77,10 @@ export default class SoMap extends React.Component {
 
     render() {
         return (
-            <div ref="mapContainer" style={st.container} />
+            <div style={st.container}>
+                <div ref="mapContainer" style={st.container} />
+                {this.renderComponents(this.props.mapComponents||[])}
+            </div>
         )
     }
 }

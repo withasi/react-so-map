@@ -44,19 +44,14 @@ module.exports = {
             //之前已开发的部分维持现状，之后的项目启用css module 方式组织css样式。
             {
                 test: /\.less$/,
-                exclude: path.resolve('css'),
-                loader: 'style!css?modules&localIdentName=[name]-[local]-[hash:base64:5]!less'
+                exclude: path.resolve('src/css'),
+                loader: 'style!css!less'
             },
             {
                 test: /\.less$/,
-                include: path.resolve('css'),
+                include: path.resolve('src/css'),
                 loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")
             },
-            {
-                test: /\.(png|jpg)$/,
-                include: path.resolve('img'),
-                loader: 'url-loader?limit=2048&name=new/images/[name].[ext]'
-            }
         ]
     },
     resolve: {

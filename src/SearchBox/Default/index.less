@@ -1,0 +1,56 @@
+@color1:#535353;
+@color2:#d8d8d8;
+@color3:#ff7e30;
+@color4:#3295f0;
+@color5:#0dbf57;
+@color6:#ededed;
+@color7:#ff5a49;
+@border:1px solid @color6;
+@arial:Arial;
+.ellipsis(){
+  white-space: nowrap;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow:hidden;
+}
+.clearfix(){
+  display: block;
+  zoom: 1;
+  &:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: left;
+    visibility: hidden;
+  }
+}
+.poiItem{
+  padding:15px 15px 15px 27px;
+  border-bottom:1px solid #dedede;
+  cursor: pointer;
+  .clearfix();
+  overflow: hidden;
+  &:hover{
+    background: #f6f6f6;
+  }
+}
+
+.poiContent{
+  margin-left:30px;
+}
+
+.topSection{
+  padding-right:20px;
+  .clearfix();
+}
+.info{
+
+}
+
+.bottomSection{
+  margin-top:10px;
+}
+
+
+

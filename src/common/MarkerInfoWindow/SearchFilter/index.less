@@ -1,0 +1,24 @@
+.ulTab{
+  padding:8px 0;
+  border-bottom:1px solid #e5e5e5;
+  &:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+.tab{
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width:120px;
+  height:30px;
+  line-height:30px;
+  text-align: center;
+  border-left:1px solid #e5e5e5;
+  cursor:pointer;
+  &:first-child{
+    border-left:none;
+  }
+}

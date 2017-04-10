@@ -25,7 +25,7 @@ export default class App extends React.Component {
             <SoMap mapOptions={{
                 zoom: 14,
                 center: {lat: 39.975065, lng: 116.490241}
-            }}
+            }} mapComponents={['searchBox']}
                    eventHanders={{
                        'click': mapEvent => {
                            console.log("click position:" + mapEvent.latLng.lat + "," + mapEvent.latLng.lng)
