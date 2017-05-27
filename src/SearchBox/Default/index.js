@@ -9,10 +9,14 @@ import Title from '../Title/index';
 export default class Default extends Component {
     constructor(props){
         super(props);
+
+        //bad: let m = this.props.m
+        let m = props.m;
+
         /*this.state = {
             active:false
         }*/
-        this.handleMouseEnter = this.handleMouseEnter.bind(this);
+        this.handleMouseEnter = this.handleMouseEnter.bind(this);   
         this.handleMouseLeave = this.handleMouseLeave.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.refreshMarkerClick = this.refreshMarkerClick.bind(this);
